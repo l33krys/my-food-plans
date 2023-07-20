@@ -5,10 +5,11 @@ document.querySelector("body").appendChild(h2); */
 // Today's meal
 const button = document.getElementById('btn');
 button.addEventListener("click", function() {
-    document.getElementById('answer').innerHTML = daily_meal;
-    document.getElementById('answer').style.visibility = "visible";
+    document.getElementById('answer').innerHTML = dailyMeal; // Assign today's meal
+    document.getElementById('answer').style.visibility = "visible"; // Make visible when clicked
 })
-const day_of_week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+const dayOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 const meals = {
     Sunday: "Baked Spaghetti",
@@ -20,24 +21,26 @@ const meals = {
     Saturday: "Tri Tip",
 }
 
-// let date = new Date();
-let day_position = new Date().getDay(); //3
-let test = day_of_week[day_position];
-let daily_meal = meals[test];
+// Identify daily meal
+let dayPosition = new Date().getDay(); // Chained new Date() and .getDay(); Create date object and position in week
+let whatDayItIs = dayOfWeek[dayPosition]; // Use position in week to get day of week
+let dailyMeal = meals[whatDayItIs]; // Use day of week to get that day's meal
 
 // Toggle full menu from visible to hidden
-const full_menu = document.getElementById('toggle');
-full_menu.addEventListener("click", function() {
-    if (full_menu.innerHTML === "View full menu") {
-        full_menu.innerHTML = "Hide full menu";
-        const menu_meals = document.getElementsByClassName('menu');
-        for (const dish of menu_meals) {
+const fullMenu = document.getElementById('toggle'); // Assign element to variable for evaluation
+fullMenu.addEventListener("click", function() {
+    if (fullMenu.innerHTML === "View full menu") {
+        fullMenu.innerHTML = "Hide full menu"; // Change text to hide so that next click will hide items
+        const menuMeals = document.getElementsByClassName('menu');
+        // For item in object used here to access menu item individually
+        for (const dish of menuMeals) {
             dish.style.visibility = 'visible';
         }
-    } else if (full_menu.innerHTML === "Hide full menu") {
-        full_menu.innerHTML = "View full menu";
-        const menu_meals = document.getElementsByClassName('menu');
-        for (const dish of menu_meals) {
+    } else if (fullMenu.innerHTML === "Hide full menu") {
+        fullMenu.innerHTML = "View full menu";  // Change text to view so that next click will show items
+        const menuMeals = document.getElementsByClassName('menu');
+        // For item in object used here to access menu item individually
+        for (const dish of menuMeals) {
             dish.style.visibility = 'hidden';
         }    
     }
