@@ -42,11 +42,14 @@ footer {
     font-family: Marker Felt, fantasy;
 }
 #btn {
-
+    margin-bottom: 20px;
 }
 #answer {
     visibility: hidden;
     color: white;
     background-color: black;
     font-size: 60px;
+    margin: auto;
+    padding: 20px;
+    width: 250px;
 }
