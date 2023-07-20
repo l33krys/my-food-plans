@@ -14,10 +14,16 @@ div#top {
     padding-top: 50px;
     text-align: center;
 }
-div#toggle {
+div#allMeals {
     width: 20%;
     margin: auto;
+
+}
+#toggle {
     border: solid;
+    padding-top: 10px;
+    vertical-align: middle;
+    height: 30px;
 }
 div#overview,
 div footer {
