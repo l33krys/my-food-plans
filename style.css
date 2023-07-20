@@ -14,13 +14,20 @@ div#top {
     padding-top: 50px;
     text-align: center;
 }
+div#all-meals {
+    width: 20%;
+    margin: auto;
+    border: solid;
+}
 div#overview,
 div footer {
     padding-bottom: 50px;
     text-align: center;
-}
-div.menu {
     width: 100%;
+}
+.menu {
+    width: 100%;
+    visibility: hidden;
 }
 #top {
     text-align: center;
@@ -31,6 +38,8 @@ div.menu {
     display: flex;
     flex-wrap: wrap;
     font-family: Tahoma, sans-serif;
+    margin: auto;
+    width: 100%;
 }
 a {
     color: white;
@@ -43,6 +52,7 @@ footer {
 }
 #btn {
     margin-bottom: 20px;
+    font-size: 20px;
 }
 #answer {
     visibility: hidden;
@@ -51,5 +61,6 @@ footer {
     font-size: 60px;
     margin: auto;
     padding: 20px;
+    margin-bottom: 20px;
     width: 250px;
 }
